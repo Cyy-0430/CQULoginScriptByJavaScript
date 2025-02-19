@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>重庆大学一键登录脚本</title>
+</head>
+
+<body>
+    <div style="height: 200px; margin: auto; text-align: center;">
+        <h1>重庆大学一键登录脚本</h1>
+        <h2 id="username"></h2> <br>
+        <a id="get" href="">点击登录</a>
+    </div>
+    <script>
+        const COMPUTER = 0
+        const PHONE = 1
+
+        const username = "2021666666" // 在这里设置你的上网账号
+        const password = "1145141919810" // 在这里设置你的上网密码
+        const choice = PHONE // 在这里修改你的上网设备选择
+
+        const usernameTag = document.getElementById("username")
+        usernameTag.innerHTML = `上网账号为${username}` 
+        
+        const loginTag = document.getElementById("get")
+        loginTag.setAttribute("href", `http://10.10.8.162:801/eportal/portal/login?user_account=,${choice},${username}&user_password=${password}`)
+    </script>
+</body>
+
+</html>
